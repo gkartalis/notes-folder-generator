@@ -31,7 +31,10 @@ years.forEach((year) => {
   // create folder for each month
   createArrayFor(12).forEach((month) => {
     const formattedMonth = DateTime.local(year, month).toFormat("LLL");
-    createDirectory(`./${year}/${formattedMonth}`);
+    // create directory for each month only if it's not in the past
+    if (month >= DateTime.now().month) {
+      createDirectory(`./${year}/${formattedMonth}`);
+    }
 
     // get days in each month
     const daysInMonth = DateTime.local(year, month).daysInMonth;
