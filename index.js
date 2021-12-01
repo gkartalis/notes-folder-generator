@@ -32,7 +32,7 @@ years.forEach((year) => {
   createArrayFor(12).forEach((month) => {
     const formattedMonth = DateTime.local(year, month).toFormat("LLL");
     // create directory for each month only if it's not in the past
-    if (month >= DateTime.now().month) {
+    if (isTodayOrFuture(DateTime.local(year, month))) {
       createDirectory(`./${year}/${formattedMonth}`);
     }
 
