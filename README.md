@@ -12,7 +12,7 @@ Created this script to generate a folder structure like:
   - ...
   - 29-Wed.md
   - 30-Thu.md
-  - 31-Dec.md
+  - 31-Fri.md
   - ...
 ```
 
